@@ -11,7 +11,7 @@ alias back="cd -" # Go to previous directory
 ### Git aliases
 
 # Delete specified branch
-alias dob="git branch -d"
+alias dob="git branch -d" # Already have gbD which is git branch -D
 
 # Setting main as the default
 alias init-main='
@@ -35,7 +35,7 @@ git submodule update --init --recursive
 
 alias co='git checkout' # Checkout branch
 
-alias cob='git checkout -b' # Checkout with a new branch
+alias cob='git checkout -b' # Checkout with a new branch expected branch name (ex. cob newBranch)
 
 alias save='
 git add -A
