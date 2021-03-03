@@ -1,4 +1,4 @@
-alias aliases="code ~/.oh-my-zsh/custom/aliases.zsh"
+alias aliases="code ~/.oh-my-zsh/custom" # Open custom folder to edit/view aliases
 alias clr="clear" # Clear your terminal screen
 alias ip="curl icanhazip.com" # Your public IP address
 alias ll="ls -al" # List all files in current directory in long list format
