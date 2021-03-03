@@ -10,6 +10,12 @@ alias back="cd -" # Go to previous directory
 
 ### Git aliases
 
+# Add all changes and commit with specified comment
+alias gac='
+git add .
+echo -n "Commit message: " && read msg && git commit -m "$msg"
+'
+
 # Delete specified branch
 alias dob="git branch -d" # Already have gbD which is git branch -D
 
