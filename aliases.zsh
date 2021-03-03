@@ -16,6 +16,13 @@ git add .
 echo -n "Commit message: " && read msg && git commit -m "$msg"
 '
 
+# Same as previous just push after
+alias gacp='
+git add .
+echo -n "Commit message: " && read msg && git commit -m "$msg"
+git push
+'
+
 # Delete specified branch
 alias dob="git branch -d" # Already have gbD which is git branch -D
 
