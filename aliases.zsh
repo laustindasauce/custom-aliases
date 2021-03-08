@@ -11,7 +11,6 @@ alias back="cd -" # Go to previous directory
 ### Python aliases
 
 alias python="python3" # Set alias for python to default to python 3
-
 alias pip="/usr/local/bin/python3 -m pip" # Set alias for pip installs to go to python 3
 
 ### Git aliases
