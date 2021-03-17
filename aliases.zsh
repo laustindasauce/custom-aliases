@@ -55,6 +55,11 @@ alias co='git checkout' # Checkout branch
 
 alias cob='git checkout -b' # Checkout with a new branch expected branch name (ex. cob newBranch)
 
+# Checkout with a new branch and push to remote repository
+alias cobp='
+echo -n "Branch Name: " && read branch && git checkout -b $branch && git push --set-upstream origin $branch
+'
+
 alias save='
 git add -A
 git commit -m "SAVEPOINT"
