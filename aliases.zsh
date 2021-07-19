@@ -8,7 +8,7 @@ alias ut="uptime" # Computer uptime
 alias up="cd .." # Go to one directory up
 alias back="cd -" # Go to previous directory
 
-### Python aliases
+### Python aliases 
 
 alias python="python3" # Set alias for python to default to python 3
 alias pip="/usr/local/bin/python3 -m pip" # Set alias for pip installs to go to python 3
