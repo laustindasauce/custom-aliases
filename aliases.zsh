@@ -82,3 +82,8 @@ git reset HEAD~1 --hard
 # Adding Meteor shortcut since download not working properly on M1
 alias meteor='/usr/local/bin/launch-meteor'
 alias github='cd Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/GitHub/'
+
+# Adding various shortcuts to cloud docs
+alias cloud='cd Library/Mobile\ Documents/com\~apple\~CloudDocs/'
+alias school='cd Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL'
+alias work='cd Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/WORK'
