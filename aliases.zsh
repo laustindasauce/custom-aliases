@@ -28,6 +28,9 @@ echo -n "Commit message: " && read msg && git commit -m "$msg"
 git push
 '
 
+# GitHub Status command
+alias gs='git status'
+
 # Delete specified branch
 alias dob="git branch -d" # Already have gbD which is git branch -D
 
