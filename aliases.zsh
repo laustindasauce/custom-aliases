@@ -68,6 +68,12 @@ git add -A
 git commit -m "SAVEPOINT"
 '
 
+alias savepush='
+git add -A
+git commit -m "SAVEPOINT"
+git push
+'
+
 alias wipe='
 git add -A
 git commit -qm "WIPE SAVEPOINT"
@@ -90,3 +96,18 @@ alias github='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/Git
 alias cloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
 alias school='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL'
 alias work='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/WORK'
+
+alias pushschool='
+cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
+echo -n "Please enter semester: " && read curr
+for d in "$curr"/*/
+
+do
+    (cd "$d"
+    if git diff-index --quiet HEAD --; then
+        echo "No changes to commit in $d"
+    else
+        savepush
+    fi)
+done
+'
