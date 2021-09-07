@@ -111,3 +111,13 @@ do
     fi)
 done
 '
+
+alias fpschool='
+cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
+echo -n "Please enter semester: " && read curr
+for d in "$curr"/*/
+
+do
+    (cd "$d" && fp)
+done
+'
