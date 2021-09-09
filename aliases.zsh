@@ -104,12 +104,13 @@ echo -n "Please enter semester: " && read curr
 for d in "$curr"/*/
 
 do
-    (cd "$d"
-    if git diff-index --quiet HEAD --; then
-        echo "No changes to commit in $d"
-    else
-        savepush
-    fi)
+    (cd "$d" && savepush
+    # if git diff-index --quiet HEAD --; then
+    #     echo "No changes to commit in $d"
+    # else
+    #     savepush
+    # fi
+    )
 done
 '
 
