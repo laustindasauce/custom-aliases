@@ -99,7 +99,7 @@ alias school='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCH
 alias work='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/WORK'
 
 alias pushschool='
-cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
+cd ~/Documents/SCHOOL/semesters
 echo -n "Please enter semester: " && read curr
 for d in "$curr"/*/
 
@@ -115,7 +115,7 @@ done
 '
 
 alias fpschool='
-cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
+cd ~/Documents/SCHOOL/semesters
 echo -n "Please enter semester: " && read curr
 for d in "$curr"/*/
 
