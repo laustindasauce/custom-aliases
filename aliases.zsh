@@ -122,3 +122,5 @@ do
     (cd "$d" && fp)
 done
 '
+
+alias redis='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-server'
