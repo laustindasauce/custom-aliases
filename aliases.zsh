@@ -13,6 +13,11 @@ alias back="cd -" # Go to previous directory
 alias python="python3" # Set alias for python to default to python 3
 alias pip="/usr/local/bin/python3 -m pip" # Set alias for pip installs to go to python 3
 
+### Go aliases
+
+alias godoc="~/go/bin/godoc"
+alias godoc-web"~/go/bin/godoc -http=:6060"
+
 ### Git aliases
 
 # Add all changes and commit with specified comment
@@ -90,7 +95,6 @@ git reset HEAD~1 --hard
 
 # Adding Meteor shortcut since download not working properly on M1
 alias meteor='/usr/local/bin/launch-meteor'
-alias sudo-meteor='sudo /usr/local/bin/launch-meteor'
 alias github='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/GitHub/'
 
 # Adding various shortcuts to cloud docs
