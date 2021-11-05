@@ -53,6 +53,17 @@ git fetch
 git pull --rebase
 '
 
+# Prune the remote origin
+alias gpro='git remote prune origin'
+
+# Test which branches would be deleted if you run gpro
+alias gprot='git remote prune origin --dry-run'
+
+# Prune orphaned/unused branches
+alias gp='git prune'
+
+alias gba='git branch -a'
+
 # Search commits
 alias fresh='
 git pull --rebase --prune
