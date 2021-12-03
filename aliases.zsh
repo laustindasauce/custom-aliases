@@ -17,6 +17,7 @@ alias pip="/usr/local/bin/python3 -m pip" # Set alias for pip installs to go to 
 
 alias godoc="~/go/bin/godoc"
 alias godoc-web"~/go/bin/godoc -http=:6060"
+alias gocmt="~/go/bin/gocmt"
 
 ### Git aliases
 
