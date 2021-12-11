@@ -8,6 +8,12 @@ alias ut="uptime" # Computer uptime
 alias up="cd .." # Go to one directory up
 alias back="cd -" # Go to previous directory
 
+### NPM issue
+# alias npm="/usr/local/bin/npm" # Set alias for npm command
+
+### Redis
+alias redis="/Users/austinspencer/Documents/redis/redis-6.0.4/src/redis-server"
+
 ### Python aliases 
 
 alias python="python3" # Set alias for python to default to python 3
