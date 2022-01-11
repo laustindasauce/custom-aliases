@@ -142,3 +142,8 @@ done
 
 alias redis='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-server'
 alias redis-cli='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-cli'
+
+
+# postgresql
+alias postgresql-start='brew services start postgresql@13'
+alias postgresql-stop='brew services stop postgresql@13'
