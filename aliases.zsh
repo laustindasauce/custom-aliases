@@ -18,6 +18,7 @@ alias redis="/Users/austinspencer/Documents/redis/redis-6.0.4/src/redis-server"
 
 alias python="python3" # Set alias for python to default to python 3
 alias pip="/usr/local/bin/python3 -m pip" # Set alias for pip installs to go to python 3
+alias py-activate='echo -n "env folder: " && read env_name && source "$env_name"/bin/activate'
 
 ### Git aliases
 
