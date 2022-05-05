@@ -122,34 +122,34 @@ alias github='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/Git
 
 # Adding various shortcuts to cloud docs
 alias cloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
-alias school='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL'
+# alias school='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL'
 alias work='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/WORK'
 
-alias pushschool='
-cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
-echo -n "Please enter semester: " && read curr
-for d in "$curr"/*/
+# alias pushschool='
+# cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
+# echo -n "Please enter semester: " && read curr
+# for d in "$curr"/*/
 
-do
-    (cd "$d" && savepush
-    # if git diff-index --quiet HEAD --; then
-    #     echo "No changes to commit in $d"
-    # else
-    #     savepush
-    # fi
-    )
-done
-'
+# do
+#     (cd "$d" && savepush
+#     # if git diff-index --quiet HEAD --; then
+#     #     echo "No changes to commit in $d"
+#     # else
+#     #     savepush
+#     # fi
+#     )
+# done
+# '
 
-alias fpschool='
-cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
-echo -n "Please enter semester: " && read curr
-for d in "$curr"/*/
+# alias fpschool='
+# cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
+# echo -n "Please enter semester: " && read curr
+# for d in "$curr"/*/
 
-do
-    (cd "$d" && fp)
-done
-'
+# do
+#     (cd "$d" && fp)
+# done
+# '
 
 alias redis='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-server'
 alias redis-cli='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-cli'
