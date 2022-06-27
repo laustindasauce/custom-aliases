@@ -166,7 +166,7 @@ alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context
 # concourse
 alias fly-pipe='fly -t guldentech set-pipeline \
 	-p ${PWD##*/} \
-	-c  ../build-deploy.yml \
+	-c  /Users/austinspencer/GitHub/build-deploy.yml \
 	--team=austin-spencer \
 	-l ci/variables.yaml
 '
