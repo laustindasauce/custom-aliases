@@ -7,6 +7,7 @@ alias o="open ." # Open the current directory in Finder
 alias ut="uptime" # Computer uptime
 alias up="cd .." # Go to one directory up
 alias back="cd -" # Go to previous directory
+alias dirnm='echo ${PWD##*/}' # Get name of current folder
 
 ### Python aliases 
 
@@ -161,3 +162,11 @@ alias postgresql-stop='brew services stop postgresql@13'
 
 # kubectl
 alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context guldentech-"$msg"'
+
+# concourse
+alias fly-pipe='fly -t guldentech set-pipeline \
+	-p ${PWD##*/} \
+	-c  ../build-deploy.yml \
+	--team=austin-spencer \
+	-l ci/variables.yaml
+'
