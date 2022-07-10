@@ -10,6 +10,8 @@ alias back="cd -" # Go to previous directory
 
 ### NPM issue
 # alias npm="/usr/local/bin/npm" # Set alias for npm command
+### expo-cli
+# alias expo="/Users/austinbspencer/.npm-packages/bin/expo"
 
 ### Redis
 alias redis="/Users/austinspencer/Documents/redis/redis-6.0.4/src/redis-server"
@@ -130,3 +132,6 @@ do
     (cd "$d" && fp)
 done
 '
+
+# Run go executables
+alias air='/Users/austinspencer/go/bin/air'
