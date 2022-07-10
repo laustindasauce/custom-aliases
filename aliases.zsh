@@ -20,6 +20,7 @@ alias py-activate='echo -n "env name: " && read env_name && source "$env_name"/b
 alias godoc="~/go/bin/godoc"
 alias godoc-web"~/go/bin/godoc -http=:6060"
 alias gocmt="~/go/bin/gocmt"
+alias air="~/go/bin/air"
 
 ### Git aliases
 
