@@ -21,6 +21,7 @@ alias godoc="~/go/bin/godoc"
 alias godoc-web"~/go/bin/godoc -http=:6060"
 alias gocmt="~/go/bin/gocmt"
 alias air="~/go/bin/air"
+alias swag="~/go/bin/swag"
 
 ### Git aliases
 
