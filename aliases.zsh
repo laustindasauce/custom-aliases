@@ -138,3 +138,11 @@ alias air='/Users/austinspencer/go/bin/air'
 
 # kubectl
 alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context guldentech-"$msg"'
+
+# concourse
+alias fly-pipe='fly -t guldentech set-pipeline \
+	-p ${PWD##*/} \
+	-c  /Users/austinspencer/GitHub/build-deploy.yml \
+	--team=austin-spencer \
+	-l ci/variables.yaml
+'
