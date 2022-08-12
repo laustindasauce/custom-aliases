@@ -161,6 +161,7 @@ alias redis-cli='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2
 # postgresql
 alias postgresql-start='brew services start postgresql@13'
 alias postgresql-stop='brew services stop postgresql@13'
+alias psql='psql postgres'
 
 # kubectl
 alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context guldentech-"$msg"'
