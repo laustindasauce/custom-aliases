@@ -135,3 +135,6 @@ done
 
 # Run go executables
 alias air='/Users/austinspencer/go/bin/air'
+
+# kubectl
+alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context guldentech-"$msg"'
