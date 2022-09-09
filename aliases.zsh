@@ -89,6 +89,11 @@ git commit -qm "WIPE SAVEPOINT"
 git reset HEAD~1 --hard
 '
 
+alias tag='
+echo -n "tagname: " && read tag && git tag "$tag"
+git push origin --tags
+'
+
 # alias def='
 # git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@"'
 
