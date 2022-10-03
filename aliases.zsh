@@ -111,57 +111,16 @@ echo -n "tagname: " && read tag
 echo -n "annotation: " && read ant && git tag "$tag" -a "$ant"
 '
 
-# alias def='
-# git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@"'
+alias github='cd ~/github/'
 
-# alias bclean="
-# !f() { DEFAULT=$(def); git branch --merged ${1-$DEFAULT} | grep -v ' ${1-$DEFAULT}$' | xargs git branch -d; }; f"
-
-# alias bdone = "!f() { DEFAULT=$(def); git checkout ${1-$DEFAULT} && git up && git bclean ${1-$DEFAULT}; }; f"
-
-# Adding Meteor shortcut since download not working properly on M1
-alias meteor='/usr/local/bin/launch-meteor'
-alias github='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/GitHub/'
-
-# Adding various shortcuts to cloud docs
-alias cloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
-# alias school='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL'
-alias work='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/WORK'
-
-# alias pushschool='
-# cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
-# echo -n "Please enter semester: " && read curr
-# for d in "$curr"/*/
-
-# do
-#     (cd "$d" && savepush
-#     # if git diff-index --quiet HEAD --; then
-#     #     echo "No changes to commit in $d"
-#     # else
-#     #     savepush
-#     # fi
-#     )
-# done
-# '
-
-# alias fpschool='
-# cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/SCHOOL/semesters
-# echo -n "Please enter semester: " && read curr
-# for d in "$curr"/*/
-
-# do
-#     (cd "$d" && fp)
-# done
-# '
-
-alias redis='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-server'
-alias redis-cli='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-cli'
+# alias redis='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-server'
+# alias redis-cli='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-cli'
 
 
 # postgresql
-alias postgresql-start='brew services start postgresql@13'
-alias postgresql-stop='brew services stop postgresql@13'
-alias psql='psql postgres'
+# alias postgresql-start='brew services start postgresql@13'
+# alias postgresql-stop='brew services stop postgresql@13'
+# alias psql='psql postgres'
 
 # kubectl
 alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context guldentech-"$msg"'
