@@ -133,3 +133,12 @@ rm ~/.config/kitty/theme.conf &&
 ln -s ~/.config/kitty/kitty-themes/themes/"$theme".conf ~/.config/kitty/theme.conf
 '
 
+# Redis
+alias redis='sudo systemctl start redis'
+alias redis-stop='sudo systemctl stop redis'
+alias redis-restart='sudo systemctl restart redis'
+alias redis-enable='sudo systemctl enable redis'
+
+
+# Postgresql
+alias psql='sudo su - postgres'
