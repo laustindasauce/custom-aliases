@@ -113,15 +113,6 @@ echo -n "annotation: " && read ant && git tag "$tag" -a "$ant"
 
 alias github='cd ~/github/'
 
-# alias redis='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-server'
-# alias redis-cli='~/Documents/Documents\ -\ Austin’s\ Mac\ mini/Redis/redis-6.2.5/src/redis-cli'
-
-
-# postgresql
-# alias postgresql-start='brew services start postgresql@13'
-# alias postgresql-stop='brew services stop postgresql@13'
-# alias psql='psql postgres'
-
 # kubectl
 alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context guldentech-"$msg"'
 
@@ -136,9 +127,9 @@ alias fly-pipe='fly -t guldentech set-pipeline \
 # Kitty terminal customization
 alias kitheme='
 echo -n "theme: " && read theme
-THEME=https://raw.githubusercontent.com/dexpota/kitty-themes/master/themes/"$theme".conf
-&& wget "$THEME" -P ~/.config/kitty/kitty-themes/themes
-&& rm ~/.config/kitty/theme.conf
-&& ln -s ~/.config/kitty/kitty-themes/themes/"$theme".conf ~/.config/kitty/theme.conf
+THEME=https://raw.githubusercontent.com/dexpota/kitty-themes/master/themes/"$theme".conf && 
+wget "$THEME" -P ~/.config/kitty/kitty-themes/themes && 
+rm ~/.config/kitty/theme.conf && 
+ln -s ~/.config/kitty/kitty-themes/themes/"$theme".conf ~/.config/kitty/theme.conf
 '
 
