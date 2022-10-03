@@ -132,3 +132,13 @@ alias fly-pipe='fly -t guldentech set-pipeline \
 	--team=austin-spencer \
 	-l ci/variables.yaml
 '
+
+# Kitty terminal customization
+alias kitheme='
+echo -n "theme: " && read theme
+THEME=https://raw.githubusercontent.com/dexpota/kitty-themes/master/themes/"$theme".conf
+&& wget "$THEME" -P ~/.config/kitty/kitty-themes/themes
+&& rm ~/.config/kitty/theme.conf
+&& ln -s ~/.config/kitty/kitty-themes/themes/"$theme".conf ~/.config/kitty/theme.conf
+'
+
