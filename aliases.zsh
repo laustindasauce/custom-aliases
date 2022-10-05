@@ -8,6 +8,7 @@ alias ut="uptime" # Computer uptime
 alias up="cd .." # Go to one directory up
 alias back="cd -" # Go to previous directory
 alias dirnm='echo ${PWD##*/}' # Get name of current folder
+alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
 
 ### Python aliases 
 
