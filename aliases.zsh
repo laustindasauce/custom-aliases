@@ -120,7 +120,14 @@ alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context
 # concourse
 alias fly-pipe='fly -t guldentech set-pipeline \
 	-p ${PWD##*/} \
-	-c  ~/GitHub/build-deploy.yml \
+	-c  ~/github/concourse-pipelines/pipelines/build-deploy.yaml \
+	--team=austin-spencer \
+	-l ci/variables.yaml
+'
+# Fly pipe with no versioning
+alias fly-pipe-nv='fly -t guldentech set-pipeline \
+	-p ${PWD##*/} \
+	-c  ~/github/concourse-pipelines/pipelines/build-deploy-no-versioning.yaml \
 	--team=austin-spencer \
 	-l ci/variables.yaml
 '
@@ -142,4 +149,7 @@ alias redis-enable='sudo systemctl enable redis'
 
 
 # Postgresql
-alias psql='sudo su - postgres'
+alias postgres='sudo su - postgres'
+
+# Intellij
+alias intellij='~/idea-IC-222.4345.14/bin/idea.sh &'
