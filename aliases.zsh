@@ -15,6 +15,7 @@ alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
 alias python="python3" # Set alias for python to default to python 3
 alias pip="/usr/local/bin/python3 -m pip" # Set alias for pip installs to go to python 3
 alias py-activate='echo -n "env name: " && read env_name && source "$env_name"/bin/activate' # Set alias to activate local environments
+alias freeze="python -m pip freeze > requirements.txt"
 
 ### Go aliases
 
