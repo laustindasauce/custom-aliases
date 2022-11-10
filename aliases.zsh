@@ -154,3 +154,6 @@ alias postgres='sudo su - postgres'
 
 # Intellij
 alias intellij='~/idea-IC-222.4345.14/bin/idea.sh &'
+
+# Linux updates
+alias update='sudo apt-get update && sudo apt-get upgrade'
