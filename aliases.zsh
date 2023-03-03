@@ -129,13 +129,13 @@ rm -r ~/github/bots-api-dev/config
 rm -r ~/github/bots-api-dev/scripts
 rm ~/github/bots-api-dev/go.mod
 rm ~/github/bots-api-dev/go.sum
-cp -a ~/github/bots-api/internal/. internal/
-cp -a ~/github/bots-api/pkg/. pkg/
-cp -a ~/github/bots-api/platform/. platform/
-cp -a ~/github/bots-api/config/. config/
-cp -a ~/github/bots-api/scripts/. scripts/
-cp ~/github/bots-api/go.mod go.mod
-cp ~/github/bots-api/go.sum go.sum
+cp -a ~/github/bots-api/internal/. ~/github/bots-api-dev/internal/
+cp -a ~/github/bots-api/pkg/. ~/github/bots-api-dev/pkg/
+cp -a ~/github/bots-api/platform/. ~/github/bots-api-dev/platform/
+cp -a ~/github/bots-api/config/. ~/github/bots-api-dev/config/
+cp -a ~/github/bots-api/scripts/. ~/github/bots-api-dev/scripts/
+cp ~/github/bots-api/go.mod ~/github/bots-api-dev/go.mod
+cp ~/github/bots-api/go.sum ~/github/bots-api-dev/go.sum
 cd ~/github/bots-api-dev
 go mod tidy
 swag init --parseDependency --parseInternal
