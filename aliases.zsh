@@ -77,6 +77,14 @@ git pull --rebase --prune
 git submodule update --init --recursive
 '
 
+alias refresh='
+git checkout main
+git fetch
+git pull
+git branch -d dev
+git checkout -b dev
+'
+
 alias co='git checkout' # Checkout branch
 
 alias cob='git checkout -b' # Checkout with a new branch expected branch name (ex. cob newBranch)
