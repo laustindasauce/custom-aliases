@@ -121,6 +121,30 @@ echo -n "tagname: " && read tag
 echo -n "annotation: " && read ant && git tag "$tag" -a "$ant"
 '
 
+alias updt-api-dev='
+rm -r ~/github/bots-api-dev/internal
+rm -r ~/github/bots-api-dev/pkg
+rm -r ~/github/bots-api-dev/platform
+rm -r ~/github/bots-api-dev/config
+rm -r ~/github/bots-api-dev/scripts
+rm ~/github/bots-api-dev/go.mod
+rm ~/github/bots-api-dev/go.sum
+cp -a ~/github/bots-api/internal/. internal/
+cp -a ~/github/bots-api/pkg/. pkg/
+cp -a ~/github/bots-api/platform/. platform/
+cp -a ~/github/bots-api/config/. config/
+cp -a ~/github/bots-api/scripts/. scripts/
+cp ~/github/bots-api/go.mod go.mod
+cp ~/github/bots-api/go.sum go.sum
+cd ~/github/bots-api-dev
+go mod tidy
+swag init --parseDependency --parseInternal
+git add .
+git commit -m "update from main"
+git push
+back
+'
+
 alias github='cd ~/github/'
 
 # kubectl
