@@ -27,6 +27,9 @@ alias swag="~/go/bin/swag"
 
 ### Git aliases
 
+# Clone shortcut
+alias gc='git clone'
+
 # Add all changes and commit with specified comment
 alias gac='
 git add .
@@ -189,3 +192,4 @@ alias intellij='~/idea-IC-222.4345.14/bin/idea.sh &'
 
 # Linux updates
 alias update='sudo apt-get update && sudo apt-get upgrade'
+alias exp='explorer.exe .'
