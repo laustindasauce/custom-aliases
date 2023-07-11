@@ -19,11 +19,8 @@ alias freeze="python -m pip freeze > requirements.txt"
 
 ### Go aliases
 
-alias godoc="~/go/bin/godoc"
-alias godoc-web"~/go/bin/godoc -http=:6060"
-alias gocmt="~/go/bin/gocmt"
-alias air="~/go/bin/air"
-alias swag="~/go/bin/swag"
+alias godoc-web="~/go/bin/godoc -http=:6060"
+alias swag-air="~/go/bin/swag init --parseDependency  --parseInternal --parseDepth 1 -g main.go && ~/go/bin/air"
 
 ### Git aliases
 
@@ -151,7 +148,9 @@ back
 alias github='cd ~/github/'
 
 # kubectl
-alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context guldentech-"$msg"'
+# alias kontext='echo -n "context: " && read msg && kubectl config use-context "$msg"'
+alias kontext='kubectl config use-context '
+alias kontext-gke='kubectl config use-context gke_austinbspencer_us-central1_main-cluster'
 
 # concourse
 alias fly-pipe='fly -t guldentech set-pipeline \
