@@ -177,11 +177,9 @@ ln -s ~/.config/kitty/kitty-themes/themes/"$theme".conf ~/.config/kitty/theme.co
 '
 
 # Redis
-alias redis='sudo systemctl start redis'
-alias redis-stop='sudo systemctl stop redis'
-alias redis-restart='sudo systemctl restart redis'
-alias redis-enable='sudo systemctl enable redis'
-
+alias redis='sudo service redis-server start'
+alias redis-stop='sudo service redis-server stop'
+alias redis-restart='sudo service redis-server restart'
 
 # Postgresql
 alias postgres='sudo su - postgres'
