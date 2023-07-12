@@ -153,6 +153,10 @@ alias kontext='kubectl config use-context '
 alias kontext-gke='kubectl config use-context gke_austinbspencer_us-central1_main-cluster'
 
 # concourse
+alias fly-login='fly -t guldentech login \
+	--team-name austin-spencer \
+	--concourse-url https://concourse2.guldentech.com
+'
 alias fly-pipe='fly -t guldentech set-pipeline \
 	-p ${PWD##*/} \
 	-c  ~/github/concourse-pipelines/pipelines/build-deploy.yaml \
