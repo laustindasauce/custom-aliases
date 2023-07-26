@@ -33,12 +33,19 @@ git push'
 
 alias gfrs='echo -n "Release name: " && read name && git flow release start $name'
 alias gfrf='echo -n "Release name: " && read name && git flow release finish $name
+co main
+git push
+co develop
 git push
 git push --tags'
 
 alias gfhs='echo -n "Hotfix name: " && read name && git flow hotfix start $name'
 alias gfhf='echo -n "Hotfix name: " && read name && git flow hotfix finish $name
-git push'
+co main
+git push
+co develop
+git push
+git push --tags'
 
 
 ### Git aliases
