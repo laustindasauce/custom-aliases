@@ -19,8 +19,27 @@ alias freeze="python -m pip freeze > requirements.txt"
 
 ### Go aliases
 
-alias godoc-web="~/go/bin/godoc -http=:6060"
-alias swag-air="~/go/bin/swag init --parseDependency  --parseInternal --parseDepth 1 -g main.go && ~/go/bin/air"
+alias godoc-web="godoc -http=:6060"
+alias swag-air="swag init --parseDependency  --parseInternal --parseDepth 1 -g main.go && air"
+
+
+### Git Flow aliases
+
+alias gf='git flow'
+
+alias gffs='echo -n "Feature name: " && read name && git flow feature start $name'
+alias gfff='echo -n "Feature name: " && read name && git flow feature finish $name
+git push'
+
+alias gfrs='echo -n "Release name: " && read name && git flow release start $name'
+alias gfrf='echo -n "Release name: " && read name && git flow release finish $name
+git push
+git push --tags'
+
+alias gfhs='echo -n "Hotfix name: " && read name && git flow hotfix start $name'
+alias gfhf='echo -n "Hotfix name: " && read name && git flow hotfix finish $name
+git push'
+
 
 ### Git aliases
 
@@ -194,3 +213,7 @@ alias intellij='~/idea-IC-222.4345.14/bin/idea.sh &'
 # Linux updates
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias exp='explorer.exe .'
+
+# Windows shortcuts
+alias open="explorer.exe"
+alias pbcopy="clip.exe"
