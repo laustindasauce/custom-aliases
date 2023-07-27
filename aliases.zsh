@@ -18,8 +18,8 @@ alias redis="/Users/austinspencer/Documents/redis/redis-6.0.4/src/redis-server"
 
 ### Python aliases 
 
-alias python="python3" # Set alias for python to default to python 3
-alias pip="/usr/local/bin/python3 -m pip" # Set alias for pip installs to go to python 3
+# alias python="python3.10" # Set alias for python to default to python 3
+alias pip="/usr/local/bin/python3.10 -m pip" # Set alias for pip installs to go to python 3
 alias py-activate='echo -n "env folder: " && read env_name && source "$env_name"/bin/activate'
 
 ### Git aliases
@@ -105,7 +105,7 @@ git push origin --tags
 # Adding Meteor shortcut since download not working properly on M1
 alias run-meteor='/usr/local/bin/launch-meteor run'
 alias cmd-meteor='/usr/local/bin/launch-meteor'
-alias github='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/GitHub/'
+alias github='/Users/austinspencer/GitHub'
 
 # Adding various shortcuts to cloud docs
 alias cloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
@@ -139,7 +139,9 @@ done
 '
 
 # Run go executables
-alias air='/Users/austinspencer/go/bin/air'
+# alias air='/Users/austinspencer/go/bin/air'
+# alias go-finance-cli='/Users/austinspencer/go/bin/go-finance-cli'
+# alias cobra-cli='/Users/austinspencer/go/bin/cobra-cli'
 
 # kubectl
 alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context guldentech-"$msg"'
@@ -148,6 +150,13 @@ alias kontext='echo -n "dev or prod: " && read msg && kubectl config use-context
 alias fly-pipe='fly -t guldentech set-pipeline \
 	-p ${PWD##*/} \
 	-c  ~/GitHub/build-deploy.yml \
+	--team=austin-spencer \
+	-l ci/variables.yaml
+'
+
+alias fly-pipe-ver='fly -t guldentech set-pipeline \
+	-p ${PWD##*/} \
+	-c  ~/GitHub/build-deploy-ver.yml \
 	--team=austin-spencer \
 	-l ci/variables.yaml
 '
