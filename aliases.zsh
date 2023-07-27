@@ -22,6 +22,30 @@ alias redis="/Users/austinspencer/Documents/redis/redis-6.0.4/src/redis-server"
 alias pip="/usr/local/bin/python3.10 -m pip" # Set alias for pip installs to go to python 3
 alias py-activate='echo -n "env folder: " && read env_name && source "$env_name"/bin/activate'
 
+### Git Flow
+
+alias gf='git flow'
+
+alias gffs='echo -n "Feature name: " && read name && git flow feature start $name'
+alias gfff='echo -n "Feature name: " && read name && git flow feature finish $name
+git push'
+
+alias gfrs='echo -n "Release name: " && read name && git flow release start $name'
+alias gfrf='echo -n "Release name: " && read name && git flow release finish $name
+co main
+git push
+co develop
+git push
+git push --tags'
+
+alias gfhs='echo -n "Hotfix name: " && read name && git flow hotfix start $name'
+alias gfhf='echo -n "Hotfix name: " && read name && git flow hotfix finish $name
+co main
+git push
+co develop
+git push
+git push --tags'
+
 ### Git aliases
 
 # Add all changes and commit with specified comment
