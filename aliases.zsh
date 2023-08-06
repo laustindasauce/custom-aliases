@@ -25,25 +25,7 @@ alias swag-air="swag init --parseDependency  --parseInternal --parseDepth 1 -g m
 
 ### Git Flow aliases
 
-alias gf='git flow'
-
-alias gffs='echo -n "Feature name: " && read name && git flow feature start $name'
-alias gfff='echo -n "Feature name: " && read name && git flow feature finish $name
-git push'
-
-alias gfrs='echo -n "Release name: " && read name && git flow release start $name'
-alias gfrf='echo -n "Release name: " && read name && git flow release finish $name'
-
-alias gfhs='echo -n "Hotfix name: " && read name && git flow hotfix start $name'
-alias gfhf='echo -n "Hotfix name: " && read name && git flow hotfix finish $name'
-
-alias gfp='
-co main
-git push
-co develop
-git push
-git push --tags
-'
+# Removed to opt for the git-flow plugin
 
 
 ### Git aliases
