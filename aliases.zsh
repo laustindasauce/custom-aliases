@@ -1,4 +1,4 @@
-alias aliases="code ~/.oh-my-zsh/custom" # Open custom folder to edit/view aliases
+alias aliases="vim ~/.oh-my-zsh/custom/aliases.zsh" # Open custom folder to edit/view aliases
 alias clr="clear" # Clear your terminal screen
 alias ip="curl icanhazip.com" # Your public IP address
 alias ll="ls -al" # List all files in current directory in long list format
@@ -9,6 +9,7 @@ alias up="cd .." # Go to one directory up
 alias back="cd -" # Go to previous directory
 alias dirnm='echo ${PWD##*/}' # Get name of current folder
 alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
+alias ports='sudo lsof -i -P -n | grep LISTEN' # See all ports currently in use
 
 ### Python aliases 
 
