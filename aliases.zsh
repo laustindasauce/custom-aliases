@@ -11,6 +11,11 @@ alias dirnm='echo ${PWD##*/}' # Get name of current folder
 alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
 alias ports='sudo lsof -i -P -n | grep LISTEN' # See all ports currently in use
 
+alias lab='cd ~/lab'
+
+alias auth-user='sudo vim /mnt/volume/config/authelia/users_database.yml'
+alias auth-conf='sudo vim /mnt/volume/config/authelia/configuration.yml'
+
 ### Python aliases 
 
 alias python="python3" # Set alias for python to default to python 3
