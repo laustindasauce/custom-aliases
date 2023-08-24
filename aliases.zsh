@@ -26,6 +26,13 @@ alias swag-air="swag init --parseDependency  --parseInternal --parseDepth 1 -g m
 ### Git Flow aliases
 
 # Removed to opt for the git-flow plugin:
+alias gflu='
+co main
+git push
+co develop
+git push
+git push --tags
+'
 # alias gcd='git checkout $(git config gitflow.branch.develop)'
 # alias gch='git checkout $(git config gitflow.prefix.hotfix)'
 # alias gcr='git checkout $(git config gitflow.prefix.release)'
