@@ -13,7 +13,7 @@ alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
 ### Python aliases 
 
 alias python="python3" # Set alias for python to default to python 3
-alias pip="/usr/local/bin/python3 -m pip" # Set alias for pip installs to go to python 3
+# alias pip="/usr/bin/python3 -m pip" # Set alias for pip installs to go to python 3
 alias py-activate='echo -n "env name: " && read env_name && source "$env_name"/bin/activate' # Set alias to activate local environments
 alias freeze="python -m pip freeze > requirements.txt"
 
@@ -22,6 +22,10 @@ alias freeze="python -m pip freeze > requirements.txt"
 alias godoc-web="godoc -http=:6060"
 alias swag-air="swag init --parseDependency  --parseInternal --parseDepth 1 -g main.go && air"
 
+### SSH aliases
+
+alias ssh-mrpi='ssh "$MRPI_USER@MRPI_IP'
+alias ssh-rpi='ssh "$RPI_USER"@"$RPI_IP"'
 
 ### Git Flow aliases
 
