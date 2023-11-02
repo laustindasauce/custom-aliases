@@ -24,7 +24,7 @@ alias swag-air="swag init --parseDependency  --parseInternal --parseDepth 1 -g m
 
 ### SSH aliases
 
-alias ssh-mrpi='ssh "$MRPI_USER@MRPI_IP'
+alias ssh-mrpi='ssh "$MRPI_USER@"$MRPI_IP"'
 alias ssh-rpi='ssh "$RPI_USER"@"$RPI_IP"'
 
 ### Git Flow aliases
