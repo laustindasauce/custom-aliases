@@ -133,80 +133,16 @@ echo -n "tagname: " && read tag
 echo -n "annotation: " && read ant && git tag "$tag" -a "$ant"
 '
 
-alias updt-api-dev='
-rm -r ~/github/bots-api-dev/internal
-rm -r ~/github/bots-api-dev/pkg
-rm -r ~/github/bots-api-dev/platform
-rm -r ~/github/bots-api-dev/config
-rm -r ~/github/bots-api-dev/scripts
-rm ~/github/bots-api-dev/go.mod
-rm ~/github/bots-api-dev/go.sum
-cp -a ~/github/bots-api/internal/. ~/github/bots-api-dev/internal/
-cp -a ~/github/bots-api/pkg/. ~/github/bots-api-dev/pkg/
-cp -a ~/github/bots-api/platform/. ~/github/bots-api-dev/platform/
-cp -a ~/github/bots-api/config/. ~/github/bots-api-dev/config/
-cp -a ~/github/bots-api/scripts/. ~/github/bots-api-dev/scripts/
-cp ~/github/bots-api/go.mod ~/github/bots-api-dev/go.mod
-cp ~/github/bots-api/go.sum ~/github/bots-api-dev/go.sum
-cd ~/github/bots-api-dev
-go mod tidy
-swag init --parseDependency --parseInternal
-git add .
-git commit -m "update from main"
-git push
-back
-'
-
-alias github='cd ~/github/'
-
 # kubectl
 # alias kontext='echo -n "context: " && read msg && kubectl config use-context "$msg"'
 alias kontext='kubectl config use-context '
 alias kontext-gke='kubectl config use-context gke_austinbspencer_us-central1_main-cluster'
-
-# concourse
-alias fly-login='fly -t guldentech login \
-	--team-name austin-spencer \
-	--concourse-url https://concourse2.guldentech.com
-'
-alias fly-pipe='fly -t guldentech set-pipeline \
-	-p ${PWD##*/} \
-	-c  ~/github/concourse-pipelines/pipelines/build-deploy.yaml \
-	--team=austin-spencer \
-	-l ci/variables.yaml
-'
-# Fly pipe with no versioning
-alias fly-pipe-nv='fly -t guldentech set-pipeline \
-	-p ${PWD##*/} \
-	-c  ~/github/concourse-pipelines/pipelines/build-deploy-no-versioning.yaml \
-	--team=austin-spencer \
-	-l ci/variables.yaml
-'
-
-# Kitty terminal customization
-alias kitheme='
-echo -n "theme: " && read theme
-THEME=https://raw.githubusercontent.com/dexpota/kitty-themes/master/themes/"$theme".conf && 
-wget "$THEME" -P ~/.config/kitty/kitty-themes/themes && 
-rm ~/.config/kitty/theme.conf && 
-ln -s ~/.config/kitty/kitty-themes/themes/"$theme".conf ~/.config/kitty/theme.conf
-'
 
 # Redis
 alias redis='sudo service redis-server start'
 alias redis-stop='sudo service redis-server stop'
 alias redis-restart='sudo service redis-server restart'
 
-# Postgresql
-alias postgres='sudo su - postgres'
-
-# Intellij
-alias intellij='~/idea-IC-222.4345.14/bin/idea.sh &'
-
 # Linux updates
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias exp='explorer.exe .'
-
-# Windows shortcuts
-alias open="explorer.exe"
-alias pbcopy="clip.exe"
