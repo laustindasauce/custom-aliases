@@ -46,6 +46,13 @@ co develop
 git push
 git push --tags'
 
+alias gflu='
+co main
+git push
+co develop
+git push
+git push --tags'
+
 ### Git aliases
 
 # Add all changes and commit with specified comment
