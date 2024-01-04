@@ -26,6 +26,7 @@ alias swag-air="swag init --parseDependency  --parseInternal --parseDepth 1 -g m
 
 alias ssh-mrpi='ssh "$MRPI_USER"@"$MRPI_IP"'
 alias ssh-rpi='ssh "$RPI_USER"@"$RPI_IP"'
+alias ssh-e800='ssh "$E800_USER"@"$E800_IP"'
 
 ### Git Flow aliases
 
@@ -33,9 +34,9 @@ alias ssh-rpi='ssh "$RPI_USER"@"$RPI_IP"'
 alias gflu='
 co main
 git push
+git push --tags
 co develop
 git push
-git push --tags
 '
 # alias gcd='git checkout $(git config gitflow.branch.develop)'
 # alias gch='git checkout $(git config gitflow.prefix.hotfix)'
@@ -175,6 +176,25 @@ cp -a ~/github/bots-api/pkg/. ~/github/bots-api-dev/pkg/
 cp -a ~/github/bots-api/platform/. ~/github/bots-api-dev/platform/
 cp -a ~/github/bots-api/config/. ~/github/bots-api-dev/config/
 cp -a ~/github/bots-api/scripts/. ~/github/bots-api-dev/scripts/
+cp ~/github/bots-api/go.mod ~/github/bots-api-dev/go.mod
+cp ~/github/bots-api/go.sum ~/github/bots-api-dev/go.sum
+cd ~/github/bots-api-dev
+go mod tidy
+swag init --parseDependency --parseInternal
+git add .
+git commit -m "update from main"
+git push
+back
+'
+
+alias updt-api-dev-rsync='
+rm ~/github/bots-api-dev/go.mod
+rm ~/github/bots-api-dev/go.sum
+rsync -a --delete ~/github/bots-api/internal/. ~/github/bots-api-dev/internal/
+rsync -a --delete ~/github/bots-api/pkg/. ~/github/bots-api-dev/pkg/
+rsync -a --delete ~/github/bots-api/platform/. ~/github/bots-api-dev/platform/
+rsync -a --delete ~/github/bots-api/config/. ~/github/bots-api-dev/config/
+rsync -a --delete ~/github/bots-api/scripts/. ~/github/bots-api-dev/scripts/
 cp ~/github/bots-api/go.mod ~/github/bots-api-dev/go.mod
 cp ~/github/bots-api/go.sum ~/github/bots-api-dev/go.sum
 cd ~/github/bots-api-dev
