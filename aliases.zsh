@@ -138,12 +138,12 @@ echo -n "Branch Name: " && read branch && git checkout -b $branch && git push --
 
 alias save='
 git add -A
-git commit -m "SAVEPOINT"
+git commit -m "SAVEPOINT $(date)"
 '
 
 alias savepush='
 git add -A
-git commit -m "SAVEPOINT"
+git commit -m "SAVEPOINT $(date)"
 git push
 '
 
