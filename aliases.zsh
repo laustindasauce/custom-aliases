@@ -259,3 +259,12 @@ alias exp='explorer.exe .'
 # Windows shortcuts
 alias open="explorer.exe"
 alias pbcopy="clip.exe"
+
+# Docker shortcuts
+alias dcpu='
+echo -n "container: " && read container
+docker compose pull "$container" && 
+docker compose up -d "$container"
+'
+
+alias dcpua='docker compose pull && docker compose up -d'
