@@ -260,11 +260,13 @@ alias exp='explorer.exe .'
 alias open="explorer.exe"
 alias pbcopy="clip.exe"
 
-# Docker shortcuts
-alias dcpu='
-echo -n "container: " && read container
-docker compose pull "$container" && 
-docker compose up -d "$container"
-'
+# # Docker shortcuts
+# Docker shortcuts function
+dcpu_function() {
+  local container="$1"
+  docker compose pull "$container" && docker compose up -d "$container"
+}
 
+# Alias to call the function
+alias dcpu='dcpu_function'
 alias dcpua='docker compose pull && docker compose up -d'
