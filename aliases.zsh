@@ -147,3 +147,15 @@ alias redis-restart='sudo service redis-server restart'
 # Linux updates
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias exp='explorer.exe .'
+
+# Docker shortcuts
+# Docker shortcuts function
+dcpu_function() {
+  local container="$1"
+  docker compose pull "$container" && docker compose up -d "$container"
+}
+
+# Alias to call the function
+alias dcpu='dcpu_function'
+alias dcpua='docker compose pull && docker compose up -d'
+
