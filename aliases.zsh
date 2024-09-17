@@ -12,7 +12,7 @@ alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
 alias ports='sudo lsof -i -P -n | grep LISTEN' # See all ports currently in use
 
 alias lab='cd ~/lab'
-alias containers='cd /home/pi/lab/containers/rpi'
+alias containers='cd /home/pi/lab/containers'
 
 alias auth-user='sudo vim /mnt/volume/config/authelia/users_database.yml'
 alias auth-conf='sudo vim /mnt/volume/config/authelia/configuration.yml'
