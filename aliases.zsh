@@ -109,7 +109,8 @@ alias gpro='git remote prune origin'
 alias gprot='git remote prune origin --dry-run'
 
 # Prune orphaned/unused branches
-alias gp='git prune'
+alias gprune="
+git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
 alias gba='git branch -a'
 
