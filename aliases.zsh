@@ -159,3 +159,13 @@ dcpu_function() {
 alias dcpu='dcpu_function'
 alias dcpua='docker compose pull && docker compose up -d'
 
+alias caddy-up='
+sudo cp /home/pi/lab/containers/Caddyfile /etc/caddy/Caddyfile
+sudo caddy fmt --overwrite /etc/caddy/Caddyfile
+caddy reload --config /etc/caddy/Caddyfile
+sudo cp /etc/caddy/Caddyfile /home/pi/lab/containers/Caddyfile
+'
+
+alias caddy-fmt='sudo caddy fmt --overwrite /etc/caddy/Caddyfile'
+
+alias caddy-rel='caddy reload --config /etc/caddy/Caddyfile'
