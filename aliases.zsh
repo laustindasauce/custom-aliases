@@ -11,6 +11,7 @@ alias dirnm='echo ${PWD##*/}' # Get name of current folder
 alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
 alias rm='echo "rm is disabled, use remove or trash or /bin/rm instead."'
 alias remove='/bin/rm -i'
+alias sudo='sudo '
 
 ### Python aliases 
 
