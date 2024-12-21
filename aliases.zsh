@@ -10,6 +10,8 @@ alias back="cd -" # Go to previous directory
 alias dirnm='echo ${PWD##*/}' # Get name of current folder
 alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
 alias ports='sudo lsof -i -P -n | grep LISTEN' # See all ports currently in use
+alias rm='echo "rm is disabled, use remove or trash or /bin/rm instead."'
+alias remove='/bin/rm -i'
 
 alias lab='cd ~/lab'
 alias containers='cd /home/pi/lab/containers'
@@ -169,3 +171,8 @@ sudo cp /etc/caddy/Caddyfile /home/pi/lab/containers/Caddyfile
 alias caddy-fmt='sudo caddy fmt --overwrite /etc/caddy/Caddyfile'
 
 alias caddy-rel='caddy reload --config /etc/caddy/Caddyfile'
+
+alias cf-up='
+sudo cp /home/pi/lab/containers/cloudflared.config.yml /etc/cloudflared/config.yml
+sudo systemctl restart cloudflared
+'
