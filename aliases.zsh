@@ -12,6 +12,7 @@ alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
 alias ports='sudo lsof -i -P -n | grep LISTEN' # See all ports currently in use
 alias rm='echo "rm is disabled, use remove or trash or /bin/rm instead."'
 alias remove='/bin/rm -i'
+alias sudo='sudo '
 
 alias lab='cd ~/lab'
 alias containers='cd /home/pi/lab/containers'
