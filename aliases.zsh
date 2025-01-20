@@ -279,3 +279,10 @@ alias cf-up='
 sudo cp /home/austin/lab/containers/cloudflared.config.yml /etc/cloudflared/config.yml
 sudo systemctl restart cloudflared
 '
+
+alias caddy-up='
+sudo cp ~/gitea/containers/Caddyfile /etc/caddy/Caddyfile
+sudo caddy fmt --overwrite /etc/caddy/Caddyfile
+caddy reload --config /etc/caddy/Caddyfile
+sudo cp /etc/caddy/Caddyfile ~/gitea/containers/Caddyfile
+'
