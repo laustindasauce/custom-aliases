@@ -275,6 +275,8 @@ dcpu_function() {
 alias dcpu='dcpu_function'
 alias dcpua='docker compose pull && docker compose up -d'
 
+alias dc='docker compose'
+
 alias cf-up='
 sudo cp /home/austin/lab/containers/cloudflared.config.yml /etc/cloudflared/config.yml
 sudo systemctl restart cloudflared
