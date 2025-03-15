@@ -12,6 +12,8 @@ alias kill-port='echo -n "port: " && read port && fuser -k "$port"/tcp'
 alias rm='echo "rm is disabled, use remove or trash or /bin/rm instead."'
 alias remove='/bin/rm -i'
 alias sudo='sudo '
+alias size='du -h --max-depth=1'
+alias size-sort='du -h --max-depth=1 | sort -h'
 
 ### Python aliases 
 
