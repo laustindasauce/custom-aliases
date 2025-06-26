@@ -160,13 +160,13 @@ git reset HEAD~1 --hard
 '
 
 alias tag='
-echo -n "tagname: " && read tag && git tag "$tag"
+echo -n "tagname: " && read tag && git tag -s "$tag"
 git push origin --tags
 '
 
 alias tag-a='
 echo -n "tagname: " && read tag
-echo -n "annotation: " && read ant && git tag "$tag" -a "$ant"
+echo -n "annotation: " && read ant && git tag -s "$tag" -a "$ant"
 '
 
 alias updt-api-dev='
