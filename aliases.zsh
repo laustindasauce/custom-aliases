@@ -13,6 +13,9 @@ alias ports='sudo lsof -i -P -n | grep LISTEN' # See all ports currently in use
 alias rm='echo "rm is disabled, use remove or trash or /bin/rm instead."'
 alias remove='/bin/rm -i'
 alias sudo='sudo '
+alias size='du -h --max-depth=1'
+alias size-sort='du -h --max-depth=1 | sort -h'
+
 
 alias lab='cd ~/lab'
 alias containers='cd /home/pi/lab/containers'
@@ -177,3 +180,5 @@ alias cf-up='
 sudo cp /home/pi/lab/containers/cloudflared.config.yml /etc/cloudflared/config.yml
 sudo systemctl restart cloudflared
 '
+
+alias dc='docker compose'
